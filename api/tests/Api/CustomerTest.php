@@ -30,10 +30,10 @@ class CustomerTest extends ApiTestCase
             "hydra:totalItems" => 109,
         ]);
 
-        $this->assertArrayNotHasKey("id", $response->toArray()["hydra:member"][0]);
-        $this->assertArrayNotHasKey("fullName", $response->toArray()["hydra:member"][0]);
-        $this->assertArrayNotHasKey("email", $response->toArray()["hydra:member"][0]);
-        $this->assertArrayNotHasKey("country", $response->toArray()["hydra:member"][0]);
+        $this->assertArrayHasKey("id", $response->toArray()["hydra:member"][0]);
+        $this->assertArrayHasKey("fullName", $response->toArray()["hydra:member"][0]);
+        $this->assertArrayHasKey("email", $response->toArray()["hydra:member"][0]);
+        $this->assertArrayHasKey("country", $response->toArray()["hydra:member"][0]);
 
         $this->assertArrayNotHasKey("firstName", $response->toArray()["hydra:member"][0]);
         $this->assertArrayNotHasKey("lastName", $response->toArray()["hydra:member"][0]);

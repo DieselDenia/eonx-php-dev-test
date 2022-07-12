@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "^7.0",
         "nelmio/cors-bundle": "^2.1",
         "phpdocumentor/reflection-docblock": "^5.2",
+        "phpunit/phpunit": "^9.5",
         "symfony/asset": "6.0.*",
         "symfony/console": "6.0.*",
         "symfony/dotenv": "6.0.*",
@@ -91,7 +92,7 @@
             "php bin/console cache:clear --env=test",
             "php bin/console doctrine:schema:validate",
             "php bin/console doctrine:fixtures:load --no-interaction --env=test",
-            "php bin/phpunit"
+            "php vendor/bin/phpunit"
         ],
         "fresh-db": "php bin/console doctrine:fixtures:load -q"
     },
